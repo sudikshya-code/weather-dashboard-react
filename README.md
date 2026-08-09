@@ -1,16 +1,38 @@
-# React + Vite
+# Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive weather dashboard built using React.js and the OpenWeatherMap API.
 
-Currently, two official plugins are available:
+## Live Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Open Weather Dashboard](https://weather-dashboard-react-tau.vercel.app/)
 
-## React Compiler
+## About the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is a multi-page weather application developed using React.js. It allows users to select different cities and view live weather information such as temperature, humidity, weather conditions, and wind speed.
 
-## Expanding the ESLint configuration
+The application also includes dark and light themes, Celsius and Fahrenheit temperature units, a weather chart, and a contact form.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React.js
+- React Router
+- Axios
+- OpenWeatherMap REST API
+- JavaScript
+- HTML and CSS
+- Local Storage
+
+## API
+
+The application uses the OpenWeatherMap API to retrieve live weather information for selected cities.
+
+An API key is required to access the weather service. The API key is stored using an environment variable rather than being included directly in the source code.
+
+## How to Run the Project Locally
+
+First, clone the repository and open the project folder.
+
+Install the required dependencies:
+
+```bash
+npm install
