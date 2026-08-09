@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+.dark {
+    --background: #111318;
+    --surface: #1d2028;
+    --surface-secondary: #181b22;
+
+    --text: #f1f5f9;
+    --secondary-text: #aeb8c8;
+
+    --border: #303541;
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+}
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+.light {
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --surface-secondary: #e9eef5;
+
+    --text: #172033;
+    --secondary-text: #596579;
+
+    --border: #d5dce6;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+}
+
+/* =========================
+   MAIN APPLICATION
+========================= */
+
+.app {
+    min-height: 100vh;
+
+    background: var(--background);
+    color: var(--text);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background: var(--surface-secondary);
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar-brand a {
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-button {
+    padding: 9px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.theme-button:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+}

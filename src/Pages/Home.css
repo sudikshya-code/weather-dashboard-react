@@ -1,0 +1,321 @@
+.home-container {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.home-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.home-header h1 {
+    margin-bottom: 10px;
+
+    font-size: 48px;
+
+    color: var(--text);
+}
+
+.home-header p {
+    color: var(--secondary-text);
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+.controls select,
+.controls button {
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.controls select {
+    background: var(--surface);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    cursor: pointer;
+}
+
+.controls button {
+    background: var(--accent);
+
+    color: white;
+
+    border: 1px solid var(--accent);
+
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: var(--accent-hover);
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+.location h2 {
+    margin: 0;
+
+    font-size: 32px;
+
+    color: var(--text);
+}
+
+.location p {
+    margin-top: 5px;
+
+    color: var(--secondary-text);
+}
+
+.weather-icon {
+    width: 80px;
+
+    height: 80px;
+}
+
+
+/* =========================
+   WEATHER CARDS
+========================= */
+
+.weather-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.weather-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+}
+
+.weather-card span {
+    font-size: 30px;
+}
+
+.weather-card h3 {
+    color: var(--secondary-text);
+
+    font-size: 16px;
+}
+
+.weather-card p {
+    color: var(--text);
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.weather-card .condition {
+    font-size: 18px;
+
+    text-transform: capitalize;
+}
+
+
+/* =========================
+   EXTRA INFORMATION
+========================= */
+
+.extra-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+.extra-info div {
+    background: var(--surface-secondary);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.extra-info strong {
+    color: var(--secondary-text);
+}
+
+.extra-info p {
+    color: var(--text);
+
+    font-size: 18px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   CHART
+========================= */
+
+.chart-section {
+    margin-top: 40px;
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+.chart-section h2 {
+    color: var(--text);
+
+    text-align: center;
+
+    margin-bottom: 8px;
+}
+
+.chart-section > p {
+    color: var(--secondary-text);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.chart-container {
+    width: 100%;
+
+    height: 300px;
+}
+
+
+/* =========================
+   LOADING / ERROR
+========================= */
+
+.loading {
+    text-align: center;
+
+    color: var(--secondary-text);
+
+    font-size: 17px;
+}
+
+.error {
+    text-align: center;
+
+    color: #dc2626;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .weather-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .extra-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .home-header h1 {
+        font-size: 36px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls select,
+    .controls button {
+        width: 100%;
+    }
+
+    .weather-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-section {
+        padding: 20px 10px;
+    }
+
+}

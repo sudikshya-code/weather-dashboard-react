@@ -1,0 +1,213 @@
+.about-container {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+
+    color: var(--text);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.about-header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    color: var(--text);
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.about-header p {
+    color: var(--secondary-text);
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   ABOUT CARD
+========================= */
+
+.about-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    margin-bottom: 40px;
+}
+
+.about-card h2 {
+    color: var(--text);
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: var(--secondary-text);
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   TECHNOLOGY
+========================= */
+
+.technology-section {
+    margin-top: 40px;
+}
+
+.technology-section > h2 {
+    color: var(--text);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.technology-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.technology-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.technology-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+}
+
+.tech-icon {
+    font-size: 30px;
+}
+
+.technology-card h3 {
+    color: var(--text);
+
+    margin-bottom: 10px;
+}
+
+.technology-card p {
+    color: var(--secondary-text);
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    margin-top: 40px;
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+.features h2 {
+    color: var(--text);
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.feature-grid div {
+    padding: 20px;
+
+    background: var(--surface-secondary);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+}
+
+.feature-grid strong {
+    color: var(--text);
+
+    font-size: 17px;
+}
+
+.feature-grid p {
+    color: var(--secondary-text);
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .technology-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .about-header h1 {
+        font-size: 34px;
+    }
+
+    .technology-grid,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
